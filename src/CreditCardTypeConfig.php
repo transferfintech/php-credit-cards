@@ -231,10 +231,6 @@ class CreditCardTypeConfig
             return false;
         }
 
-        if ($this->getLuhnCheck() && $this->satisfiesLuhn($cardNumber) === false) {
-            return false;
-        }
-
         return $this->matchesPatterns($cardNumber);
     }
 
